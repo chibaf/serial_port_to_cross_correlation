@@ -9,7 +9,7 @@ time.sleep(2)
 i=0
 d1=np.empty(0)
 d2=np.empty(0)
-f = open(sys.argv[2], "w")
+f = open(sys.argv[2], "w")  # sys.argv[2]=output file name
 while True:
   try:
 	  line = ser.readline()
@@ -47,5 +47,6 @@ while True:
 	    i=0
   except KeyboardInterrupt:
     print ('exiting')
+    ser.close()
     f.close()
     break
